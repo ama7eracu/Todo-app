@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "PA7dNhr0Yppxgi+9gARVF1XHvBrz0fAQ7Tf1bX1pU6alCGQTlKMGLzrVG+i2aUUzRpGLU5hH57UwZ+fWsXUqOA==",
+  "dgSpecHash": "0QnlhuQBvshSxNsrneTzOgcIn09GZk5y3TOukR7bwHhrP6Ybz5MKiGrs+PDz2fO0Y8m+QOHfjINwMpi2CSV8HQ==",
   "success": true,
-  "projectFilePath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/newTodo-app/TodoApp.Persistence/TodoApp.Persistence.csproj",
+  "projectFilePath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app89/TodoApp.Persistence/TodoApp.Persistence.csproj",
   "expectedPackageFiles": [
+    "/Users/aleksandrmekanin/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/Users/aleksandrmekanin/.nuget/packages/mediatr/11.1.0/mediatr.11.1.0.nupkg.sha512",
+    "/Users/aleksandrmekanin/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",
+    "/Users/aleksandrmekanin/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/aleksandrmekanin/.nuget/packages/microsoft.data.sqlite.core/7.0.2/microsoft.data.sqlite.core.7.0.2.nupkg.sha512",
     "/Users/aleksandrmekanin/.nuget/packages/microsoft.entityframeworkcore/7.0.2/microsoft.entityframeworkcore.7.0.2.nupkg.sha512",
     "/Users/aleksandrmekanin/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.2/microsoft.entityframeworkcore.abstractions.7.0.2.nupkg.sha512",

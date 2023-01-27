@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/aleksandrmekanin/RiderProjects/todo-app1/newTodo-app/TodoApp.WebApi/TodoApp.WebApi.csproj",
+      "projectUniqueName": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app89/TodoApp.WebApi/TodoApp.WebApi.csproj",
       "projectName": "TodoApp.WebApi",
-      "projectPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/newTodo-app/TodoApp.WebApi/TodoApp.WebApi.csproj",
+      "projectPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app89/TodoApp.WebApi/TodoApp.WebApi.csproj",
       "packagesPath": "/Users/aleksandrmekanin/.nuget/packages/",
-      "outputPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/newTodo-app/TodoApp.WebApi/obj/",
+      "outputPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app89/TodoApp.WebApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/aleksandrmekanin/.nuget/NuGet/NuGet.Config"

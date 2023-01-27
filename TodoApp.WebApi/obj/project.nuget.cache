@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RpFuC3oa/qFyzdvDfzL5bm+h4tfLeJPRsujCI8KJcSqvnpa/budMAMg3ns49QBRoPhOvusRxHcz2PU7PF6TheQ==",
+  "dgSpecHash": "Nxa5jzpji3kaVtMugzp3jIzayDinna/PrKoAMU+OVFPG6siUGBfI0Jk9bMIHnJpvqhbEJs7RHWyfqoBF+TZ3zw==",
   "success": true,
-  "projectFilePath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/newTodo-app/TodoApp.WebApi/TodoApp.WebApi.csproj",
+  "projectFilePath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app89/TodoApp.WebApi/TodoApp.WebApi.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
