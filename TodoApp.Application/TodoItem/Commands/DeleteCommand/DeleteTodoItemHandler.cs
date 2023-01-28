@@ -18,7 +18,7 @@ public class DeleteTodoItemHandler:IRequestHandler<DeleteTodoItemCommand>
         var item = await _dbContext.Items
             .FindAsync(new object[] {request.Id}, cancellationToken);
         
-        if (item == null || item.ListID != request.ListId)
+        if (item == null || item.ListId != request.ListId)
         {
             throw new NotFoundExceptions(nameof(Todo.Domain.TodoItem), item.Id);
         }

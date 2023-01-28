@@ -19,7 +19,7 @@ public class CreateTodoItemHandler:IRequestHandler<CreateTodoItemCommand,Guid>
             Description = request.Description,
             Done = false,
             Id = Guid.NewGuid(),
-            ListID = request.ListId,
+            ListId = request.ListId,
             Title = request.Title
         };
 

@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "rswMfJP1xw3UYXkO7JIOlYm/UyxrZFNyvo+XsaXZwyb/CqVadVN6vJLYEDg1xmjMI+g8Wsg8tAaljaPO/hTkfg==",
+  "dgSpecHash": "U16Is2XLknJvqu4IVL/IFqoZmH/2g4aQ71n4CHZcYJ5+WONJrXPOUFmC0bzZJadAJEP+a7w3GzO29RwrJJCOQw==",
   "success": true,
   "projectFilePath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app89/TodoApp.Application/TodoApp.Application.csproj",
   "expectedPackageFiles": [
     "/Users/aleksandrmekanin/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/aleksandrmekanin/.nuget/packages/mediatr/11.1.0/mediatr.11.1.0.nupkg.sha512",
     "/Users/aleksandrmekanin/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",
+    "/Users/aleksandrmekanin/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/11.0.0/mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "/Users/aleksandrmekanin/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/aleksandrmekanin/.nuget/packages/microsoft.entityframeworkcore/7.0.2/microsoft.entityframeworkcore.7.0.2.nupkg.sha512",
     "/Users/aleksandrmekanin/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.2/microsoft.entityframeworkcore.abstractions.7.0.2.nupkg.sha512",
