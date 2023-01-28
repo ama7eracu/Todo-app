@@ -12,7 +12,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp.Application", "Todo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp.Persistence", "TodoApp.Persistence\TodoApp.Persistence.csproj", "{CE16D145-5A7B-48BF-A7C4-037D734D40C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.WebApi", "Todo.WebApi\Todo.WebApi.csproj", "{1B828DBC-7AB2-417F-8EEF-1C8D252358B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp.WebApi", "TodoApp.WebApi\TodoApp.WebApi.csproj", "{1B828DBC-7AB2-417F-8EEF-1C8D252358B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
