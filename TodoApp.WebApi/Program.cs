@@ -15,9 +15,11 @@ builder.Services.AddEndpointsApiExplorer();
 services.AddHttpContextAccessor();
 services.AddAutoMapper(typeof(TodoListDetailsDto), typeof(TodoItemsDetailsDto),typeof(CreateTodoListDto),typeof(UpdateTodoListDto));
 services.AddControllers();
+services.AddSwaggerGen();
 
 var app = builder.Build();
-
+app.UseSwagger();
+app.UseSwaggerUI();
 app.UseHttpsRedirection();
 //app.UseWelcomePage();
 app.MapControllers();
