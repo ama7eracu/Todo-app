@@ -19,12 +19,12 @@ public class CreateTodoItemHandler:IRequestHandler<CreateTodoItemCommand,Guid>
             Description = request.Description,
             Done = false,
             Id = Guid.NewGuid(),
-            ListId = request.ListId,
+            TodoListId = request.ListId,
             Title = request.Title
         };
 
         _dbContext.Items.AddAsync(item, cancellationToken);
-        
+        _dbContext.SaveChangesAsync(cancellationToken);
         return item.Id;
     }
 }

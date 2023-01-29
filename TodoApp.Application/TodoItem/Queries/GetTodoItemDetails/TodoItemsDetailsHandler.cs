@@ -24,7 +24,7 @@ public class TodoItemsDetailsHandler:IRequestHandler<GetTodoItemDetailsQuery,Tod
         var item = await _dbContext.Items
             .FirstOrDefaultAsync(entity => entity.Id == request.Id,cancellationToken);
 
-        if (item == null || item.Id != request.ListId)
+        if (item == null || item.TodoListId != request.ListId)
         {
             throw new NotFoundExceptions(nameof(Todo.Domain.TodoItem), item.Id);
         }
