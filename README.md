@@ -7,5 +7,4 @@
       5)Вывод всех списков/задач
       6)Отмечать выполнение задачи(готов/не готов)
       
-Используемые технологии:1)Asp.net core 2)Entity Framework 3)SQLlite 4)Medatr +(design pattern Mediator,CQRS ) 5)Swagger 6)Dependency Injection 7)AutoMapper
-8)Git
+Используемые технологии:1)Asp.net core 2)Entity Framework 3)SQLlite 4)Medatr +(design pattern Mediator,CQRS ) 5)Swagger  6)AutoMapper
