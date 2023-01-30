@@ -36,7 +36,7 @@ public class TodoController:BaseController
             Id = id,
             UserId = UserId
         };
-        var vm = Mediator.Send(query);
+        var vm = await Mediator.Send(query);
         return Ok(vm);
     }
 

@@ -1,13 +1,12 @@
 using AutoMapper;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using TodoApp.Application.Common.Exceptions;
 using TodoApp.Application.Interfaces;
-using TodoApp.Application.TodoList.Queries.GetTodoListDetails;
+
 
 namespace TodoApp.Application.TodoItem.Queries.GetTodoItemDetails;
-
+using Todo.Domain;
 public class TodoItemsDetailsHandler:IRequestHandler<GetTodoItemDetailsQuery,TodoItemsDetailsDto>
 {
     private readonly ITodoDbContext _dbContext;
@@ -26,7 +25,7 @@ public class TodoItemsDetailsHandler:IRequestHandler<GetTodoItemDetailsQuery,Tod
 
         if (item == null || item.TodoListId != request.ListId)
         {
-            throw new NotFoundExceptions(nameof(Todo.Domain.TodoItem), item.Id);
+            throw new NotFoundExceptions(nameof(TodoItem), item.Id);
         }
 
         return _mapper.Map<TodoItemsDetailsDto>(item);

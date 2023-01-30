@@ -23,6 +23,8 @@ public class DeleteTodoItemHandler:IRequestHandler<DeleteTodoItemCommand>
             throw new NotFoundExceptions(nameof(Todo.Domain.TodoItem), item.Id);
         }
 
+        _dbContext.Items.Remove(item);
+        _dbContext.SaveChangesAsync(cancellationToken);
         return Unit.Value;
     }
 }

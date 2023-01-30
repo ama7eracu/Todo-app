@@ -13,7 +13,7 @@ public class TodoDbContext:DbContext,ITodoDbContext
         base(options){}
 
     protected override void OnModelCreating(ModelBuilder builder)
-    {
+    { 
         base.OnModelCreating(builder);
         builder.Entity<TodoItem>().HasKey(item => item.Id);
         builder.Entity<TodoItem>().HasIndex(item => item.Id).IsUnique();

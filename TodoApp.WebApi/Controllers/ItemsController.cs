@@ -36,7 +36,7 @@ public class ItemsController:BaseController
         var itemID = await Mediator.Send(createTodoItemCommand);
         return itemID;
     }
-    [HttpPut("{ListID}")]
+    [HttpPut("{ListID}/items")]
     public async Task<IActionResult> UpdateItem([FromBody]UpdateTodoItemCommand updateTodoItemCommand,Guid ListID)
     {
         await Mediator.Send(updateTodoItemCommand);

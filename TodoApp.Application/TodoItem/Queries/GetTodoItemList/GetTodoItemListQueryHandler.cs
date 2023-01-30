@@ -2,7 +2,6 @@ using AutoMapper;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using TodoApp.Application.Interfaces;
-using TodoApp.Application.TodoList.Queries.GetTodoListFullList;
 
 namespace TodoApp.Application.TodoItem.Queries.GetTodoItemList;
 

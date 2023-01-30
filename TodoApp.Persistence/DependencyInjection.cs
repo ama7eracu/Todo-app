@@ -11,13 +11,15 @@ public static class DependencyInjection
         services, IConfiguration configuration)
     {
         var connectionString = configuration["DbConnect"];
+        
         services.AddDbContext<TodoDbContext>(options =>
         {
             options.UseSqlite(connectionString);
         });
-        services.AddScoped<ITodoDbContext>(provider =>
         
+        services.AddScoped<ITodoDbContext>(provider =>
             provider.GetService<TodoDbContext>());
+        
         return services;
     }
 }

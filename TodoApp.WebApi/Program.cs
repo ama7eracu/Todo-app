@@ -1,5 +1,7 @@
 using Todo.WebApi.Models;
 using TodoApp.Application;
+using TodoApp.Application.Common.AutoMapperProfiles;
+using TodoApp.Application.Common.AutoMapperProfiles.ItemsProfiles;
 using TodoApp.Application.TodoItem.Queries.GetTodoItemDetails;
 using TodoApp.Application.TodoList.Queries.GetTodoListDetails;
 using TodoApp.Persistence;
@@ -13,15 +15,16 @@ builder.Services.AddApplication();
 builder.Services.AddEndpointsApiExplorer();
 
 services.AddHttpContextAccessor();
-services.AddAutoMapper(typeof(TodoListDetailsDto), typeof(TodoItemsDetailsDto),typeof(CreateTodoListDto),typeof(UpdateTodoListDto));
+services.AddAutoMapper(typeof(TodoItemToTodoItemDetails), typeof(TodoItemToTodoItemLookUp),typeof(CreateTodoLIstDtoProfile),
+    typeof(UpdateTodoListDtoProfile),typeof(TodoListToTodoListDetails),typeof(TodoListToTodoListLookUp));
 services.AddControllers();
 services.AddSwaggerGen();
 
 var app = builder.Build();
+
 app.UseSwagger();
 app.UseSwaggerUI();
 app.UseHttpsRedirection();
-//app.UseWelcomePage();
 app.MapControllers();
 
 using (var scope=app.Services.CreateScope())
