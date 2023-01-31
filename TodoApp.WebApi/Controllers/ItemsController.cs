@@ -1,4 +1,8 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using SQLitePCL;
+using Todo.WebApi.Models;
+using Todo.WebApi.Models.TodoItem;
 using TodoApp.Application.TodoItem.Commands.CreateTodoItem;
 using TodoApp.Application.TodoItem.Commands.DeleteCommand;
 using TodoApp.Application.TodoItem.Commands.UpdateTodoItem;
@@ -9,16 +13,24 @@ namespace Todo.WebApi.Controllers;
 [Route("api/Todo")]
 public class ItemsController:BaseController
 {
-    [HttpGet("{id}/items")]
-    public async Task<ActionResult<TodoItemVm>> GetAllItems(Guid id)
+
+    private IMapper _mapper;
+    public ItemsController(IMapper mapper)
+    {
+        _mapper = mapper;
+    }
+    
+    [HttpGet("{Listid}/items")]
+    public async Task<ActionResult<TodoItemVm>> GetAllItems(Guid Listid)
     {
         var query = new GetTodoItemListQuery
         {
-            ListId = id
+            ListId = Listid
         };
         var vm = await Mediator.Send(query);
         return Ok(vm);
     }
+    
     [HttpGet("{ListId}/items/{id}")]
     public async Task<ActionResult<TodoItemsDetailsDto>> GetItem(Guid ListId,Guid id)
     {
@@ -30,18 +42,26 @@ public class ItemsController:BaseController
         var vm =await Mediator.Send(query);
         return Ok(vm);
     }
+    
     [HttpPost("{ListId}/items")]
-    public async Task<ActionResult<Guid>> CreateItem( CreateTodoItemCommand createTodoItemCommand,Guid ListId)
+    public async Task<ActionResult<Guid>> CreateItem( CreateTodoItemDto createTodoItemDto,Guid ListId)
     {
-        var itemID = await Mediator.Send(createTodoItemCommand);
+        var command = _mapper.Map<CreateTodoItemCommand>(createTodoItemDto);
+        command.ListId = ListId;
+        command.UserId = UserId;
+        var itemID = await Mediator.Send(command);
         return itemID;
     }
+    
     [HttpPut("{ListID}/items")]
-    public async Task<IActionResult> UpdateItem([FromBody]UpdateTodoItemCommand updateTodoItemCommand,Guid ListID)
+    public async Task<IActionResult> UpdateItem(UpdateTodoItemDto updateTodoItemDto,Guid ListID)
     {
-        await Mediator.Send(updateTodoItemCommand);
+        var command = _mapper.Map<UpdateTodoItemCommand>(updateTodoItemDto);
+        command.UserId = UserId;
+        await Mediator.Send(command);
         return NoContent();
     }
+    
     [HttpDelete("{ListId}/items/{id}")]
     public async Task<IActionResult> DeleteItem(Guid id,Guid ListId)
     {

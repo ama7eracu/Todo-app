@@ -6,4 +6,5 @@ public class GetTodoItemDetailsQuery:IRequest<TodoItemsDetailsDto>
 {
     public Guid ListId { get; set; }
     public Guid Id { get; set; }
+    public Guid UserId { get; set; }
 }

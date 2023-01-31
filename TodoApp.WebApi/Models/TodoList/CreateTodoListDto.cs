@@ -8,6 +8,4 @@ public class CreateTodoListDto
 {
     public string Description { get; set; }
     public string Title { get; set; }
-    
-    
 }

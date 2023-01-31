@@ -20,7 +20,8 @@ public class CreateTodoItemHandler:IRequestHandler<CreateTodoItemCommand,Guid>
             Done = false,
             Id = Guid.NewGuid(),
             TodoListId = request.ListId,
-            Title = request.Title
+            Title = request.Title,
+            UserId=request.UserId
         };
 
         _dbContext.Items.AddAsync(item, cancellationToken);
