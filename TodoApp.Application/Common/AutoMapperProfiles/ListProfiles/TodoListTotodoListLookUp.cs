@@ -1,12 +1,12 @@
 using AutoMapper;
 using TodoApp.Application.TodoList.Queries.GetTodoListFullList;
 
-namespace TodoApp.Application.Common.AutoMapperProfiles;
-using Todo.Domain;
+namespace TodoApp.Application.Common.AutoMapperProfiles.ListProfiles;
+
 public class TodoListToTodoListLookUp:Profile
 {
     public TodoListToTodoListLookUp()
     {
-        CreateMap<TodoListLookUpDto, TodoList>().ReverseMap();
+        CreateMap<TodoListLookUpDto, Todo.Domain.TodoList>().ReverseMap();
     }
 }

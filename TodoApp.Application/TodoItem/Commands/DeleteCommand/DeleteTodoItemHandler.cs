@@ -24,7 +24,7 @@ public class DeleteTodoItemHandler:IRequestHandler<DeleteTodoItemCommand>
         }
 
         _dbContext.Items.Remove(item);
-        _dbContext.SaveChangesAsync(cancellationToken);
+       await _dbContext.SaveChangesAsync(cancellationToken);
         return Unit.Value;
     }
 }

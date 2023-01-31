@@ -1,7 +1,5 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using SQLitePCL;
-using Todo.WebApi.Models;
 using Todo.WebApi.Models.TodoItem;
 using TodoApp.Application.TodoItem.Commands.CreateTodoItem;
 using TodoApp.Application.TodoItem.Commands.DeleteCommand;
@@ -14,47 +12,47 @@ namespace Todo.WebApi.Controllers;
 public class ItemsController:BaseController
 {
 
-    private IMapper _mapper;
+    private readonly IMapper _mapper;
     public ItemsController(IMapper mapper)
     {
         _mapper = mapper;
     }
     
-    [HttpGet("{Listid}/items")]
-    public async Task<ActionResult<TodoItemVm>> GetAllItems(Guid Listid)
+    [HttpGet("{listId}/items")]
+    public async Task<ActionResult<TodoItemVm>> GetAllItems(Guid listId)
     {
         var query = new GetTodoItemListQuery
         {
-            ListId = Listid
+            ListId = listId
         };
         var vm = await Mediator.Send(query);
         return Ok(vm);
     }
     
-    [HttpGet("{ListId}/items/{id}")]
-    public async Task<ActionResult<TodoItemsDetailsDto>> GetItem(Guid ListId,Guid id)
+    [HttpGet("{listId}/items/{id}")]
+    public async Task<ActionResult<TodoItemsDetailsDto>> GetItem(Guid listId,Guid id)
     {
         var query = new GetTodoItemDetailsQuery
         {
             Id = id,
-            ListId = ListId
+            ListId = listId
         };
         var vm =await Mediator.Send(query);
         return Ok(vm);
     }
     
-    [HttpPost("{ListId}/items")]
-    public async Task<ActionResult<Guid>> CreateItem( CreateTodoItemDto createTodoItemDto,Guid ListId)
+    [HttpPost("{listId}/items")]
+    public async Task<ActionResult<Guid>> CreateItem( CreateTodoItemDto createTodoItemDto,Guid listId)
     {
         var command = _mapper.Map<CreateTodoItemCommand>(createTodoItemDto);
-        command.ListId = ListId;
+        command.ListId = listId;
         command.UserId = UserId;
-        var itemID = await Mediator.Send(command);
-        return itemID;
+        var itemId = await Mediator.Send(command);
+        return itemId;
     }
     
-    [HttpPut("{ListID}/items")]
-    public async Task<IActionResult> UpdateItem(UpdateTodoItemDto updateTodoItemDto,Guid ListID)
+    [HttpPut("{listId}/items")]
+    public async Task<IActionResult> UpdateItem(UpdateTodoItemDto updateTodoItemDto,Guid listId)
     {
         var command = _mapper.Map<UpdateTodoItemCommand>(updateTodoItemDto);
         command.UserId = UserId;
@@ -62,12 +60,12 @@ public class ItemsController:BaseController
         return NoContent();
     }
     
-    [HttpDelete("{ListId}/items/{id}")]
-    public async Task<IActionResult> DeleteItem(Guid id,Guid ListId)
+    [HttpDelete("{listId}/items/{id}")]
+    public async Task<IActionResult> DeleteItem(Guid id,Guid listId)
     {
         var command = new DeleteTodoItemCommand
         {
-            ListId = ListId,
+            ListId = listId,
             Id = id
         };
         await Mediator.Send(command);

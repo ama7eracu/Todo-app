@@ -24,8 +24,8 @@ public class CreateTodoItemHandler:IRequestHandler<CreateTodoItemCommand,Guid>
             UserId=request.UserId
         };
 
-        _dbContext.Items.AddAsync(item, cancellationToken);
-        _dbContext.SaveChangesAsync(cancellationToken);
+       await _dbContext.Items.AddAsync(item, cancellationToken);
+       await _dbContext.SaveChangesAsync(cancellationToken);
         return item.Id;
     }
 }

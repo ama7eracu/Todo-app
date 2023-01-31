@@ -45,8 +45,8 @@ public class TodoController:BaseController
     {
         var command = _mapper.Map<CreateTodoListCommand>(createTodoListDto);
         command.UserId = UserId;
-        var ListId = await Mediator.Send(command);
-        return Ok(ListId); 
+        var listId = await Mediator.Send(command);
+        return Ok(listId); 
     }
 
     [HttpPut]
@@ -61,12 +61,12 @@ public class TodoController:BaseController
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteList(Guid id)
     {
-        var Command = new DeleteTodoListCommand
+        var command = new DeleteTodoListCommand
         {
             Id = id,
             UserId = UserId
         };
-        await Mediator.Send(Command);
+        await Mediator.Send(command);
         return NoContent();
     }
 }
