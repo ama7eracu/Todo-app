@@ -19,7 +19,7 @@ public class GetTodoListsFullListHandler:IRequestHandler<GetTodoListsFullListQue
     public async Task<TodoListVm> Handle(GetTodoListsFullListQuery request, CancellationToken cancellationToken)
     {
         var  TodoListsQuery = await _dbContext.TodoLists
-            .Where(list => list.UserId == request.UserId).ToListAsync();
+            .Where(list => list.UserId == request.UserId).AsNoTracking().ToListAsync(cancellationToken);
         var TodoListsQueryDto =
             TodoListsQuery.Select(list => _mapper.Map<TodoListLookUpDto>(list)).ToList();
         

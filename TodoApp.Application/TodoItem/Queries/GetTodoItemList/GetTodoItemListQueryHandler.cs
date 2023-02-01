@@ -19,7 +19,7 @@ public class GetTodoItemListQueryHandler:IRequestHandler<GetTodoItemListQuery,To
     public async Task<TodoItemVm> Handle(GetTodoItemListQuery request, CancellationToken cancellationToken)
     {
         var listItems = await _dbContext
-            .Items.Where(item => item.TodoListId == request.ListId && item.UserId==request.UserId).ToListAsync(cancellationToken);
+            .Items.Where(item => item.TodoListId == request.ListId && item.UserId==request.UserId).AsNoTracking().ToListAsync(cancellationToken);
 
         var listItemsDto =  listItems
             .Select(item => _mapper.Map<TodoItemLookUpDto>(item)).ToList();

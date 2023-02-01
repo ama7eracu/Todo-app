@@ -6,6 +6,7 @@ using TodoApp.Application.TodoItem.Commands.DeleteCommand;
 using TodoApp.Application.TodoItem.Commands.UpdateTodoItem;
 using TodoApp.Application.TodoItem.Queries.GetTodoItemDetails;
 using TodoApp.Application.TodoItem.Queries.GetTodoItemList;
+using TodoApp.Application.TodoItem.Queries.SortTodoItems;
 
 namespace Todo.WebApi.Controllers;
 [Route("api/Todo")]
@@ -42,17 +43,17 @@ public class ItemsController:BaseController
     }
     
     [HttpPost("{listId}/items")]
-    public async Task<ActionResult<Guid>> CreateItem( CreateTodoItemDto createTodoItemDto,Guid listId)
+    public async Task<ActionResult<Guid>> CreateItem([FromBody] CreateTodoItemDto createTodoItemDto,Guid listId)
     {
         var command = _mapper.Map<CreateTodoItemCommand>(createTodoItemDto);
         command.ListId = listId;
         command.UserId = UserId;
         var itemId = await Mediator.Send(command);
-        return itemId;
+        return Ok(itemId);
     }
     
     [HttpPut("{listId}/items")]
-    public async Task<IActionResult> UpdateItem(UpdateTodoItemDto updateTodoItemDto,Guid listId)
+    public async Task<IActionResult> UpdateItem([FromBody] UpdateTodoItemDto updateTodoItemDto,Guid listId)
     {
         var command = _mapper.Map<UpdateTodoItemCommand>(updateTodoItemDto);
         command.UserId = UserId;
@@ -70,6 +71,18 @@ public class ItemsController:BaseController
         };
         await Mediator.Send(command);
         return NoContent();
+    }
+
+    [HttpGet("{listId}/sortitems")]
+    public async Task<ActionResult<SortTodoItemsVm>> GetSortByAlphabetAllItems(Guid listId)
+    {
+        var query = new SortTodoItemsQuery
+        {
+            ListId = listId,
+            UserID = UserId
+        };
+        var sortTodoItemsVm = await Mediator.Send(query);
+        return Ok(sortTodoItemsVm);
     }
     
 }
