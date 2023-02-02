@@ -3,10 +3,10 @@ using TodoApp.Application.TodoItem.Commands.CreateTodoItem;
 
 namespace Todo.WebApi.Models.TodoItem;
 
-public class CreateTodoItemProfile:Profile
+public class CreateTodoItemProfile : Profile
 {
     public CreateTodoItemProfile()
     {
-        CreateMap<CreateTodoItemDto,CreateTodoItemCommand>().ReverseMap();
+        CreateMap<CreateTodoItemDto, CreateTodoItemCommand>().ReverseMap();
     }
 }

@@ -6,5 +6,5 @@ public class UpdateTodoItemDto
     public string Description { get; set; }
     public bool Done { get; set; }
     public Guid Id { get; set; }
-    public Guid ListId { get; set; }    
+    public Guid ListId { get; set; }
 }

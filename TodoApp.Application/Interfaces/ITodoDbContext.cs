@@ -1,7 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 
 namespace TodoApp.Application.Interfaces;
+
 using Todo.Domain;
+
 public interface ITodoDbContext
 {
     DbSet<TodoItem> Items { get; set; }

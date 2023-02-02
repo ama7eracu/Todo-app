@@ -3,7 +3,7 @@ using TodoApp.Application.TodoList.Commands.CreateTodoList;
 
 namespace Todo.WebApi.Models;
 
-public class CreateTodoLIstDtoProfile:Profile
+public class CreateTodoLIstDtoProfile : Profile
 {
     public CreateTodoLIstDtoProfile()
     {

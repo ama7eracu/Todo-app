@@ -3,7 +3,7 @@ using TodoApp.Application.TodoList.Queries.GetTodoListFullList;
 
 namespace TodoApp.Application.Common.AutoMapperProfiles.ListProfiles;
 
-public class TodoListToTodoListLookUp:Profile
+public class TodoListToTodoListLookUp : Profile
 {
     public TodoListToTodoListLookUp()
     {

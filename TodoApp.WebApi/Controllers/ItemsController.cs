@@ -9,16 +9,17 @@ using TodoApp.Application.TodoItem.Queries.GetTodoItemList;
 using TodoApp.Application.TodoItem.Queries.SortTodoItems;
 
 namespace Todo.WebApi.Controllers;
-[Route("api/Todo")]
-public class ItemsController:BaseController
-{
 
+[Route("api/Todo")]
+public class ItemsController : BaseController
+{
     private readonly IMapper _mapper;
+
     public ItemsController(IMapper mapper)
     {
         _mapper = mapper;
     }
-    
+
     [HttpGet("{listId}/items")]
     public async Task<ActionResult<TodoItemVm>> GetAllItems(Guid listId)
     {
@@ -29,21 +30,21 @@ public class ItemsController:BaseController
         var vm = await Mediator.Send(query);
         return Ok(vm);
     }
-    
+
     [HttpGet("{listId}/items/{id}")]
-    public async Task<ActionResult<TodoItemsDetailsDto>> GetItem(Guid listId,Guid id)
+    public async Task<ActionResult<TodoItemsDetailsDto>> GetItem(Guid listId, Guid id)
     {
         var query = new GetTodoItemDetailsQuery
         {
             Id = id,
             ListId = listId
         };
-        var vm =await Mediator.Send(query);
+        var vm = await Mediator.Send(query);
         return Ok(vm);
     }
-    
+
     [HttpPost("{listId}/items")]
-    public async Task<ActionResult<Guid>> CreateItem([FromBody] CreateTodoItemDto createTodoItemDto,Guid listId)
+    public async Task<ActionResult<Guid>> CreateItem([FromBody] CreateTodoItemDto createTodoItemDto, Guid listId)
     {
         var command = _mapper.Map<CreateTodoItemCommand>(createTodoItemDto);
         command.ListId = listId;
@@ -51,18 +52,18 @@ public class ItemsController:BaseController
         var itemId = await Mediator.Send(command);
         return Ok(itemId);
     }
-    
+
     [HttpPut("{listId}/items")]
-    public async Task<IActionResult> UpdateItem([FromBody] UpdateTodoItemDto updateTodoItemDto,Guid listId)
+    public async Task<IActionResult> UpdateItem([FromBody] UpdateTodoItemDto updateTodoItemDto, Guid listId)
     {
         var command = _mapper.Map<UpdateTodoItemCommand>(updateTodoItemDto);
         command.UserId = UserId;
         await Mediator.Send(command);
         return NoContent();
     }
-    
+
     [HttpDelete("{listId}/items/{id}")]
-    public async Task<IActionResult> DeleteItem(Guid id,Guid listId)
+    public async Task<IActionResult> DeleteItem(Guid id, Guid listId)
     {
         var command = new DeleteTodoItemCommand
         {
@@ -84,5 +85,4 @@ public class ItemsController:BaseController
         var sortTodoItemsVm = await Mediator.Send(query);
         return Ok(sortTodoItemsVm);
     }
-    
 }

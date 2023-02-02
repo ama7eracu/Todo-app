@@ -3,7 +3,7 @@ using TodoApp.Application.Interfaces;
 
 namespace TodoApp.Application.TodoItem.Commands.CreateTodoItem;
 
-public class CreateTodoItemHandler:IRequestHandler<CreateTodoItemCommand,Guid>
+public class CreateTodoItemHandler : IRequestHandler<CreateTodoItemCommand, Guid>
 {
     private readonly ITodoDbContext _dbContext;
 
@@ -11,7 +11,7 @@ public class CreateTodoItemHandler:IRequestHandler<CreateTodoItemCommand,Guid>
     {
         _dbContext = dbContext;
     }
-    
+
     public async Task<Guid> Handle(CreateTodoItemCommand request, CancellationToken cancellationToken)
     {
         var item = new Todo.Domain.TodoItem
@@ -21,11 +21,11 @@ public class CreateTodoItemHandler:IRequestHandler<CreateTodoItemCommand,Guid>
             Id = Guid.NewGuid(),
             TodoListId = request.ListId,
             Title = request.Title,
-            UserId=request.UserId
+            UserId = request.UserId
         };
 
-       await _dbContext.Items.AddAsync(item, cancellationToken);
-       await _dbContext.SaveChangesAsync(cancellationToken);
+        await _dbContext.Items.AddAsync(item, cancellationToken);
+        await _dbContext.SaveChangesAsync(cancellationToken);
         return item.Id;
     }
 }

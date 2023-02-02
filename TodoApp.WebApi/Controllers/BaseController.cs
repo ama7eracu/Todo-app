@@ -3,9 +3,10 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Todo.WebApi.Controllers;
+
 [ApiController]
 [Route("api/[controller]/[action]")]
-public abstract class BaseController:ControllerBase
+public abstract class BaseController : ControllerBase
 {
     private IMediator _mediator;
 

@@ -3,7 +3,7 @@ using TodoApp.Application.TodoList.Queries.GetTodoListDetails;
 
 namespace TodoApp.Application.Common.AutoMapperProfiles.ListProfiles;
 
-public class TodoListToTodoListDetails:Profile
+public class TodoListToTodoListDetails : Profile
 {
     public TodoListToTodoListDetails()
     {

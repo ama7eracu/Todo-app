@@ -8,16 +8,17 @@ using TodoApp.Application.TodoList.Queries.GetTodoListDetails;
 using TodoApp.Application.TodoList.Queries.GetTodoListFullList;
 
 namespace Todo.WebApi.Controllers;
+
 [Route("api/[controller]")]
-public class TodoController:BaseController
+public class TodoController : BaseController
 {
     private readonly IMapper _mapper;
-    
+
     public TodoController(IMapper mapper)
     {
         _mapper = mapper;
     }
-    
+
     [HttpGet]
     public async Task<ActionResult<TodoListVm>> GetAllList()
     {
@@ -28,6 +29,7 @@ public class TodoController:BaseController
         var vm = await Mediator.Send(query);
         return Ok(vm);
     }
+
     [HttpGet("{id}")]
     public async Task<ActionResult<TodoListDetailsDto>> GetList(Guid id)
     {
@@ -46,7 +48,7 @@ public class TodoController:BaseController
         var command = _mapper.Map<CreateTodoListCommand>(createTodoListDto);
         command.UserId = UserId;
         var listId = await Mediator.Send(command);
-        return Ok(listId); 
+        return Ok(listId);
     }
 
     [HttpPut]

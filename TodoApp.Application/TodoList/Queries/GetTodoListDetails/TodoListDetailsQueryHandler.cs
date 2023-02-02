@@ -3,8 +3,11 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using TodoApp.Application.Common.Exceptions;
 using TodoApp.Application.Interfaces;
+
 namespace TodoApp.Application.TodoList.Queries.GetTodoListDetails;
+
 using Todo.Domain;
+
 public class TodoListDetailsQueryHandler
     : IRequestHandler<GetTodoListDetailsQuery, TodoListDetailsDto>
 {
@@ -21,7 +24,7 @@ public class TodoListDetailsQueryHandler
     {
         var entity = await _dbContext.TodoLists
             .FirstOrDefaultAsync(list =>
-                list.Id == request.Id,cancellationToken);
+                list.Id == request.Id, cancellationToken);
 
         if (entity == null || entity.UserId != request.UserId)
         {

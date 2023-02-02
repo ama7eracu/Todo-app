@@ -16,8 +16,9 @@ builder.Services.AddApplication();
 builder.Services.AddEndpointsApiExplorer();
 
 services.AddHttpContextAccessor();
-services.AddAutoMapper(typeof(TodoItemToTodoItemDetails), typeof(TodoItemToTodoItemLookUp),typeof(CreateTodoLIstDtoProfile),
-    typeof(UpdateTodoListDtoProfile),typeof(TodoListToTodoListDetails),typeof(TodoListToTodoListLookUp));
+services.AddAutoMapper(typeof(TodoItemToTodoItemDetails), typeof(TodoItemToTodoItemLookUp),
+    typeof(CreateTodoLIstDtoProfile),
+    typeof(UpdateTodoListDtoProfile), typeof(TodoListToTodoListDetails), typeof(TodoListToTodoListLookUp));
 services.AddControllers();
 services.AddSwaggerGen();
 
@@ -28,7 +29,7 @@ app.UseSwaggerUI();
 app.UseHttpsRedirection();
 app.MapControllers();
 
-using (var scope=app.Services.CreateScope())
+using (var scope = app.Services.CreateScope())
 {
     var serviceProvider = scope.ServiceProvider;
     try
@@ -36,9 +37,9 @@ using (var scope=app.Services.CreateScope())
         var context = serviceProvider.GetRequiredService<TodoDbContext>();
         DbInitializer.Initialize(context);
     }
-    catch(Exception exception)
+    catch (Exception exception)
     {
-         
     }
 }
+
 app.Run();

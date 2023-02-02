@@ -1,6 +1,7 @@
 using System.Reflection;
 using Microsoft.Extensions.DependencyInjection;
 using MediatR;
+
 namespace TodoApp.Application;
 
 public static class DependencyInjection
