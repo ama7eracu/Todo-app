@@ -5,12 +5,12 @@ using TodoApp.Application.Interfaces;
 
 namespace TodoApp.Application.TodoList.Queries.GetTodoListFullList;
 
-public class GetTodoListsFullListHandler : IRequestHandler<GetTodoListsFullListQuery, TodoListVm>
+public class GetTodoListsFullListQueryHandler : IRequestHandler<GetTodoListsFullListQuery, TodoListVm>
 {
     private readonly ITodoDbContext _dbContext;
     private readonly IMapper _mapper;
 
-    public GetTodoListsFullListHandler(ITodoDbContext dbContext, IMapper mapper)
+    public GetTodoListsFullListQueryHandler(ITodoDbContext dbContext, IMapper mapper)
     {
         _mapper = mapper;
         _dbContext = dbContext;

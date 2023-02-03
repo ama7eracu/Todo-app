@@ -4,11 +4,11 @@ using TodoApp.Application.Interfaces;
 
 namespace TodoApp.Application.TodoItem.Commands.DeleteCommand;
 
-public class DeleteTodoItemHandler : IRequestHandler<DeleteTodoItemCommand>
+public class DeleteTodoItemCommandHandler : IRequestHandler<DeleteTodoItemCommand>
 {
     private readonly ITodoDbContext _dbContext;
 
-    public DeleteTodoItemHandler(ITodoDbContext dbContext)
+    public DeleteTodoItemCommandHandler(ITodoDbContext dbContext)
     {
         _dbContext = dbContext;
     }

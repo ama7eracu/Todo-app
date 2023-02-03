@@ -5,12 +5,12 @@ using TodoApp.Application.Interfaces;
 
 namespace TodoApp.Application.TodoList.Commands.UpdateTodoList;
 
-public class UpdateTodoListHandler
+public class UpdateTodoListCommandHandler
     : IRequestHandler<UpdateTodoListCommand>
 {
     private readonly ITodoDbContext _dbContext;
 
-    public UpdateTodoListHandler(ITodoDbContext dbContext) =>
+    public UpdateTodoListCommandHandler(ITodoDbContext dbContext) =>
         _dbContext = dbContext;
 
     public async Task<Unit> Handle(UpdateTodoListCommand request,

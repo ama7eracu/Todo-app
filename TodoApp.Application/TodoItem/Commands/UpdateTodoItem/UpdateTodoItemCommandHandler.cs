@@ -5,11 +5,11 @@ using TodoApp.Application.Interfaces;
 
 namespace TodoApp.Application.TodoItem.Commands.UpdateTodoItem;
 
-public class UpdateTodoItemHandler : IRequestHandler<UpdateTodoItemCommand>
+public class UpdateTodoItemCommandHandler : IRequestHandler<UpdateTodoItemCommand>
 {
     private readonly ITodoDbContext _dbContext;
 
-    public UpdateTodoItemHandler(ITodoDbContext dbContext)
+    public UpdateTodoItemCommandHandler(ITodoDbContext dbContext)
     {
         _dbContext = dbContext;
     }

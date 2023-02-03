@@ -9,12 +9,12 @@ namespace TodoApp.Application.TodoItem.Queries.GetTodoItemDetails;
 
 using Todo.Domain;
 
-public class TodoItemsDetailsHandler : IRequestHandler<GetTodoItemDetailsQuery, TodoItemsDetailsDto>
+public class TodoItemsDetailsQueryHandler : IRequestHandler<GetTodoItemDetailsQuery, TodoItemsDetailsDto>
 {
     private readonly ITodoDbContext _dbContext;
     private readonly IMapper _mapper;
 
-    public TodoItemsDetailsHandler(ITodoDbContext dbContext, IMapper mapper)
+    public TodoItemsDetailsQueryHandler(ITodoDbContext dbContext, IMapper mapper)
     {
         _dbContext = dbContext;
         _mapper = mapper;

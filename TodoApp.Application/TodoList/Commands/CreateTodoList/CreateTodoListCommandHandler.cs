@@ -3,12 +3,12 @@ using TodoApp.Application.Interfaces;
 
 namespace TodoApp.Application.TodoList.Commands.CreateTodoList;
 
-public class CreateTodoListHandler
+public class CreateTodoListCommandHandler
     : IRequestHandler<CreateTodoListCommand, Guid>
 {
     private readonly ITodoDbContext _dbContext;
 
-    public CreateTodoListHandler(ITodoDbContext context) =>
+    public CreateTodoListCommandHandler(ITodoDbContext context) =>
         _dbContext = context;
 
     public async Task<Guid> Handle(CreateTodoListCommand request,

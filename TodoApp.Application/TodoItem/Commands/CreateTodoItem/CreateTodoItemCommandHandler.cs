@@ -3,11 +3,11 @@ using TodoApp.Application.Interfaces;
 
 namespace TodoApp.Application.TodoItem.Commands.CreateTodoItem;
 
-public class CreateTodoItemHandler : IRequestHandler<CreateTodoItemCommand, Guid>
+public class CreateTodoItemCommandHandler : IRequestHandler<CreateTodoItemCommand, Guid>
 {
     private readonly ITodoDbContext _dbContext;
 
-    public CreateTodoItemHandler(ITodoDbContext dbContext)
+    public CreateTodoItemCommandHandler(ITodoDbContext dbContext)
     {
         _dbContext = dbContext;
     }
