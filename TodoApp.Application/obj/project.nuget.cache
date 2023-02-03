@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U16Is2XLknJvqu4IVL/IFqoZmH/2g4aQ71n4CHZcYJ5+WONJrXPOUFmC0bzZJadAJEP+a7w3GzO29RwrJJCOQw==",
+  "dgSpecHash": "q+Da/yhwVi5PukpgNioY/A3iORNIh7NGOBC+6x8p27wTI2ClBEOsmTZYlrBogzI9zdp0G6fj+1HNYOX5WEt8Kg==",
   "success": true,
-  "projectFilePath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app89/TodoApp.Application/TodoApp.Application.csproj",
+  "projectFilePath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app228/TodoApp.Application/TodoApp.Application.csproj",
   "expectedPackageFiles": [
     "/Users/aleksandrmekanin/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/aleksandrmekanin/.nuget/packages/mediatr/11.1.0/mediatr.11.1.0.nupkg.sha512",

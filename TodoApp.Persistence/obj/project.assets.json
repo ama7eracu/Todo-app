@@ -1625,11 +1625,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app89/TodoApp.Persistence/TodoApp.Persistence.csproj",
+      "projectUniqueName": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app228/TodoApp.Persistence/TodoApp.Persistence.csproj",
       "projectName": "TodoApp.Persistence",
-      "projectPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app89/TodoApp.Persistence/TodoApp.Persistence.csproj",
+      "projectPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app228/TodoApp.Persistence/TodoApp.Persistence.csproj",
       "packagesPath": "/Users/aleksandrmekanin/.nuget/packages/",
-      "outputPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app89/TodoApp.Persistence/obj/",
+      "outputPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app228/TodoApp.Persistence/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/aleksandrmekanin/.nuget/NuGet/NuGet.Config"
@@ -1644,8 +1644,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app89/TodoApp.Application/TodoApp.Application.csproj": {
-              "projectPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app89/TodoApp.Application/TodoApp.Application.csproj"
+            "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app228/TodoApp.Application/TodoApp.Application.csproj": {
+              "projectPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app228/TodoApp.Application/TodoApp.Application.csproj"
             }
           }
         }

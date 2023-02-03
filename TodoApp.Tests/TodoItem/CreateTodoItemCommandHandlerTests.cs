@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using TodoApp.Application.TodoItem.Commands.CreateTodoItem;
 using TodoApp.Tests.Common;
+using Xunit;
 
 namespace TodoApp.Tests.TodoItem;
 

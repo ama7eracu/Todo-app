@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MgOYzItfLeEU74eVwX6lc9D3DdUVGl96vJ2umF03ij5g6w0qhfppmIWLoC/5XU2PELnFfW6Y3kbfKTSAN9hrEw==",
+  "dgSpecHash": "4ptkyalpO6ssUOp+42RvZilFvb0Ya8Ahpb2CL1pe3Xbrw2uUfW2qNpkJ4HeSjCdu8g1HyM+C3UCEbbjHHMlMbw==",
   "success": true,
-  "projectFilePath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app89/TodoApp.Persistence/TodoApp.Persistence.csproj",
+  "projectFilePath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app228/TodoApp.Persistence/TodoApp.Persistence.csproj",
   "expectedPackageFiles": [
     "/Users/aleksandrmekanin/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/aleksandrmekanin/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
