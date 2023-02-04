@@ -27,7 +27,7 @@ public class TodoItemsDetailsQueryHandler : IRequestHandler<GetTodoItemDetailsQu
 
         if (item == null || item.TodoListId != request.ListId || item.UserId != request.UserId)
         {
-            throw new NotFoundExceptions(nameof(TodoItem), item.Id);
+            throw new NotFoundExceptions(nameof(TodoItem), request.Id);
         }
 
         return _mapper.Map<TodoItemsDetailsDto>(item);

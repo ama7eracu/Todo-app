@@ -17,8 +17,8 @@ public class UpdateTodoListCommandHandler
         CancellationToken cancellationToken)
     {
         var entity =
-            await _dbContext.TodoLists.FirstOrDefaultAsync(note =>
-                note.Id == request.Id, cancellationToken);
+            await _dbContext.TodoLists.FirstOrDefaultAsync(list =>
+                list.Id == request.Id, cancellationToken);
 
         if (entity == null || entity.UserId != request.UserId)
         {

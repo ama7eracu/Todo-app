@@ -62,8 +62,8 @@ public class DeleteTodoItemCommandHandlerTests : TestCommandBase
         }, CancellationToken.None);
 
         //Assert
-        Assert.ThrowsAsync<NotFoundExceptions>(async () =>
-            deleteHandler.Handle(new DeleteTodoItemCommand
+      await  Assert.ThrowsAsync<NotFoundExceptions>(async () =>
+           await deleteHandler.Handle(new DeleteTodoItemCommand
             {
                 Id = itemId,
                 ListId = Guid.Parse("E929D6FF-45A0-4279-BE0E-6548DAD67A77"),

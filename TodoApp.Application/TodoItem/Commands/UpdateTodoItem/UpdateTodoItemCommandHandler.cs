@@ -21,7 +21,7 @@ public class UpdateTodoItemCommandHandler : IRequestHandler<UpdateTodoItemComman
 
         if (item == null || item.TodoListId != request.ListId || item.UserId != request.UserId)
         {
-            throw new NotFoundExceptions(nameof(Todo.Domain.TodoItem), item.Id);
+            throw new NotFoundExceptions(nameof(Todo.Domain.TodoItem), request.Id);
         }
 
         item.Description = request.Description;

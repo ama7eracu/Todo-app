@@ -25,7 +25,7 @@ public static class Seed
             Title = "Title 2",
             Done = false,
             Id = TodoAppContextFactory.TodoItemForUpdate,
-            UserId = TodoAppContextFactory.UserBId,
+            UserId = TodoAppContextFactory.UserAId,
             TodoListId = TodoAppContextFactory.TodoListForUpdate
         }
     };
