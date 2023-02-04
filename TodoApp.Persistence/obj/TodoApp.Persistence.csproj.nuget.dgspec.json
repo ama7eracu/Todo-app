@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app228/TodoApp.Persistence/TodoApp.Persistence.csproj": {}
+    "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app9001/TodoApp.Persistence/TodoApp.Persistence.csproj": {}
   },
   "projects": {
-    "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app228/Todo.Domain/Todo.Domain.csproj": {
+    "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app9001/Todo.Domain/Todo.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app228/Todo.Domain/Todo.Domain.csproj",
+        "projectUniqueName": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app9001/Todo.Domain/Todo.Domain.csproj",
         "projectName": "Todo.Domain",
-        "projectPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app228/Todo.Domain/Todo.Domain.csproj",
+        "projectPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app9001/Todo.Domain/Todo.Domain.csproj",
         "packagesPath": "/Users/aleksandrmekanin/.nuget/packages/",
-        "outputPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app228/Todo.Domain/obj/",
+        "outputPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app9001/Todo.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/aleksandrmekanin/.nuget/NuGet/NuGet.Config"
@@ -57,14 +57,14 @@
         }
       }
     },
-    "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app228/TodoApp.Application/TodoApp.Application.csproj": {
+    "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app9001/TodoApp.Application/TodoApp.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app228/TodoApp.Application/TodoApp.Application.csproj",
+        "projectUniqueName": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app9001/TodoApp.Application/TodoApp.Application.csproj",
         "projectName": "TodoApp.Application",
-        "projectPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app228/TodoApp.Application/TodoApp.Application.csproj",
+        "projectPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app9001/TodoApp.Application/TodoApp.Application.csproj",
         "packagesPath": "/Users/aleksandrmekanin/.nuget/packages/",
-        "outputPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app228/TodoApp.Application/obj/",
+        "outputPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app9001/TodoApp.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/aleksandrmekanin/.nuget/NuGet/NuGet.Config"
@@ -79,8 +79,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app228/Todo.Domain/Todo.Domain.csproj": {
-                "projectPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app228/Todo.Domain/Todo.Domain.csproj"
+              "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app9001/Todo.Domain/Todo.Domain.csproj": {
+                "projectPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app9001/Todo.Domain/Todo.Domain.csproj"
               }
             }
           }
@@ -132,14 +132,14 @@
         }
       }
     },
-    "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app228/TodoApp.Persistence/TodoApp.Persistence.csproj": {
+    "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app9001/TodoApp.Persistence/TodoApp.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app228/TodoApp.Persistence/TodoApp.Persistence.csproj",
+        "projectUniqueName": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app9001/TodoApp.Persistence/TodoApp.Persistence.csproj",
         "projectName": "TodoApp.Persistence",
-        "projectPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app228/TodoApp.Persistence/TodoApp.Persistence.csproj",
+        "projectPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app9001/TodoApp.Persistence/TodoApp.Persistence.csproj",
         "packagesPath": "/Users/aleksandrmekanin/.nuget/packages/",
-        "outputPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app228/TodoApp.Persistence/obj/",
+        "outputPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app9001/TodoApp.Persistence/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/aleksandrmekanin/.nuget/NuGet/NuGet.Config"
@@ -154,8 +154,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app228/TodoApp.Application/TodoApp.Application.csproj": {
-                "projectPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app228/TodoApp.Application/TodoApp.Application.csproj"
+              "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app9001/TodoApp.Application/TodoApp.Application.csproj": {
+                "projectPath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app9001/TodoApp.Application/TodoApp.Application.csproj"
               }
             }
           }

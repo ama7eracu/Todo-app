@@ -25,7 +25,8 @@ public class ItemsController : BaseController
     {
         var query = new GetTodoItemListQuery
         {
-            ListId = listId
+            ListId = listId,
+            UserId = UserId
         };
         var vm = await Mediator.Send(query);
         return Ok(vm);
@@ -37,7 +38,8 @@ public class ItemsController : BaseController
         var query = new GetTodoItemDetailsQuery
         {
             Id = id,
-            ListId = listId
+            ListId = listId,
+            UserId = UserId
         };
         var vm = await Mediator.Send(query);
         return Ok(vm);
@@ -68,7 +70,8 @@ public class ItemsController : BaseController
         var command = new DeleteTodoItemCommand
         {
             ListId = listId,
-            Id = id
+            Id = id,
+            UserId = UserId
         };
         await Mediator.Send(command);
         return NoContent();

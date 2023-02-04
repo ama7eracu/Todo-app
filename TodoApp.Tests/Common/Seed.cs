@@ -1,6 +1,7 @@
-
 namespace TodoApp.Tests.Common;
+
 using Todo.Domain;
+
 public static class Seed
 {
     public static readonly List<TodoItem> DeleteList = new List<TodoItem>()

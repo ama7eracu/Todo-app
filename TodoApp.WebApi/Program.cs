@@ -1,10 +1,7 @@
 using Todo.WebApi.Models;
 using TodoApp.Application;
-using TodoApp.Application.Common.AutoMapperProfiles;
 using TodoApp.Application.Common.AutoMapperProfiles.ItemsProfiles;
 using TodoApp.Application.Common.AutoMapperProfiles.ListProfiles;
-using TodoApp.Application.TodoItem.Queries.GetTodoItemDetails;
-using TodoApp.Application.TodoList.Queries.GetTodoListDetails;
 using TodoApp.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);

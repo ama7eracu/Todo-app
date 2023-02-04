@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AkW0gD2ZP7+4XyUSaA1LK+D+/4EEbA2w1guitjCZNUGzvqEt268cFZC5KVm0KWOcu4mY2Fflx3hlEr6aVta5sQ==",
+  "dgSpecHash": "zOoTH/Y5acOipelfHeWKOHNQX4VVGCXfm/qUKOvBuJSncGWbSe+rgKVS7r6/Z4dgrNlNIgfcKgl9NCJORtAH+w==",
   "success": true,
-  "projectFilePath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app228/TodoApp.WebApi/TodoApp.WebApi.csproj",
+  "projectFilePath": "/Users/aleksandrmekanin/RiderProjects/todo-app1/Todo-app9001/TodoApp.WebApi/TodoApp.WebApi.csproj",
   "expectedPackageFiles": [
     "/Users/aleksandrmekanin/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/aleksandrmekanin/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.0/automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

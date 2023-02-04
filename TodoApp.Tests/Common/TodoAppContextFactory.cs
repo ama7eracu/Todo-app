@@ -7,19 +7,18 @@ using Todo.Domain;
 
 public class TodoAppContextFactory
 {
-   
     public static Guid UserAId = Guid.NewGuid();
     public static Guid UserBId = Guid.NewGuid();
-    
+
     //Lists
     public static Guid TodoListForDelete = Guid.NewGuid();
     public static Guid TodoListForUpdate = Guid.NewGuid();
-    
+
     //Items
-    public static Guid TodoItemForDelete { get; set; }
-    public static Guid TodoItemForUpdate { get; set; }
-  
-    
+    public static Guid TodoItemForDelete = Guid.NewGuid();
+    public static Guid TodoItemForUpdate = Guid.NewGuid();
+
+
     public static TodoDbContext Create()
     {
         var options = new DbContextOptionsBuilder<TodoDbContext>()
@@ -33,7 +32,6 @@ public class TodoAppContextFactory
                 Title = "Title 1",
                 Description = "Description 1",
                 Id = Guid.Parse("29A34F36-470B-4471-A6EA-1E5BF50093DE"),
-                Items = Seed.DeleteList,
                 UserId = UserAId
             },
             new TodoList
@@ -41,7 +39,6 @@ public class TodoAppContextFactory
                 Title = "Title 2",
                 Description = "Description 2",
                 Id = Guid.Parse("A03A396E-A4FC-4960-B505-1340FAC0662A"),
-                Items = Seed.UpdateList,
                 UserId = UserBId
             },
             new TodoList

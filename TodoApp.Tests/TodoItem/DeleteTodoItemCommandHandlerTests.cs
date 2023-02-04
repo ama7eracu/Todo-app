@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TodoApp.Application.Common.Exceptions;
+using TodoApp.Application.TodoItem.Commands.CreateTodoItem;
 using TodoApp.Application.TodoItem.Commands.DeleteCommand;
 using TodoApp.Tests.Common;
 using Xunit;
@@ -39,8 +40,34 @@ public class DeleteTodoItemCommandHandlerTests : TestCommandBase
             await handler.Handle(new DeleteTodoItemCommand
             {
                 Id = Guid.NewGuid(),
-                ListId = TodoAppContextFactory.TodoListForDelete,
+                ListId = Guid.Parse("29A34F36-470B-4471-A6EA-1E5BF50093DE"),
                 UserId = TodoAppContextFactory.UserAId
+            }, CancellationToken.None));
+    }
+
+    [Fact]
+    public async Task DeleteTodoItemCommandHandler_WrongOnUserId()
+    {
+        //Arrange
+        var deleteHandler = new DeleteTodoItemCommandHandler(Context);
+        var createHandler = new CreateTodoItemCommandHandler(Context);
+
+        //Act
+        var itemId = await createHandler.Handle(new CreateTodoItemCommand
+        {
+            Description = "Fake D",
+            ListId = Guid.Parse("E929D6FF-45A0-4279-BE0E-6548DAD67A77"),
+            Title = "Fake T",
+            UserId = TodoAppContextFactory.UserAId
+        }, CancellationToken.None);
+
+        //Assert
+        Assert.ThrowsAsync<NotFoundExceptions>(async () =>
+            deleteHandler.Handle(new DeleteTodoItemCommand
+            {
+                Id = itemId,
+                ListId = Guid.Parse("E929D6FF-45A0-4279-BE0E-6548DAD67A77"),
+                UserId = TodoAppContextFactory.UserBId
             }, CancellationToken.None));
     }
 }
