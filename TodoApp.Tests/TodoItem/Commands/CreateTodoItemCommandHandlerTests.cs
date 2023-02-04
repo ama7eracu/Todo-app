@@ -3,7 +3,7 @@ using TodoApp.Application.TodoItem.Commands.CreateTodoItem;
 using TodoApp.Tests.Common;
 using Xunit;
 
-namespace TodoApp.Tests.TodoItem;
+namespace TodoApp.Tests.TodoItem.Commands;
 
 public class CreateTodoItemCommandHandlerTests : TestCommandBase
 {

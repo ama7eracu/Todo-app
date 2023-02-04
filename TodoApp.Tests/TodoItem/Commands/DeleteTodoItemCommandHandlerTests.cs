@@ -5,7 +5,7 @@ using TodoApp.Application.TodoItem.Commands.DeleteCommand;
 using TodoApp.Tests.Common;
 using Xunit;
 
-namespace TodoApp.Tests.TodoItem;
+namespace TodoApp.Tests.TodoItem.Commands;
 
 public class DeleteTodoItemCommandHandlerTests : TestCommandBase
 {
